@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.game-container {
+    margin-top: 20px;
+}
+
+.emoji-selection input {
+    font-size: 24px;
+    width: 50px;
+    text-align: center;
+}
+
+.mode-selection button {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 320px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
